@@ -1,0 +1,20 @@
+$yell: #fcdb5a;
+
+
+@mixin r900 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 900;
+}
+@mixin r700 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+@mixin r100 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+@mixin st400 {
+	font-family: 'Storytella', sans-serif;
+	font-weight: 400;
+}

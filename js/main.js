@@ -34,6 +34,24 @@ $(function(){
 		$('html, body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
 	});
 
-            
+   	// отложенная загрузка карты
+	var blog = $('.blog');
+	
+	
+	$(window).on('scroll', function(){
+
+		var winScroll = $(this).scrollTop();
+		var winHeght = $(this).height();
+		var summ = winScroll + winHeght;
+		var blogTop = blog.offset().top;
+
+		if(summ >= blogTop){
+			var map = $('#google-map');
+			var src = map.data('src');
+			map.attr('src', src);
+			map.removeAttr('data-src');
+			$(window).off('scroll');
+		}
+	});         
 	
 });
